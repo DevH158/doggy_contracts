@@ -1,0 +1,135 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x213076bA00d7e2808fe8bEC2b97bACf7181b9F9f",
+    "txHash": "0x80483d32058a98f3ac5d74721d9a468a68d283296a6040c35012e98926539b90"
+  },
+  "proxies": [
+    {
+      "address": "0x527eEc8B7BF16D340679eE17DA467Ff43633114C",
+      "txHash": "0x14ae420628d8e1245a87dc8bb7debbcf9b5bc760041e55da5aa8b5d86cf6adfb",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "e035c5f20531c262ebdc3360c954d37b31d328d190fe3b55783bcd716564feec": {
+      "address": "0x4991f9c889E34Ec3AB423C8D99A6B1Ea1268EAa3",
+      "txHash": "0x53bc41f911473a0b771d7ec95e8d46acfba5f7299808540cb2eb18d69d14759f",
+      "layout": {
+        "storage": [
+          {
+            "contract": "DoggyProjectsV1",
+            "label": "owner",
+            "type": "t_address_payable",
+            "src": "../project:/contracts/DoggyProjectsV1.sol:8"
+          },
+          {
+            "contract": "DoggyProjectsV1",
+            "label": "ongoingProjects",
+            "type": "t_uint256",
+            "src": "../project:/contracts/DoggyProjectsV1.sol:12"
+          },
+          {
+            "contract": "DoggyProjectsV1",
+            "label": "clientToProject",
+            "type": "t_mapping(t_address,t_mapping(t_string_memory_ptr,t_struct(ProjectStatus)22_storage))",
+            "src": "../project:/contracts/DoggyProjectsV1.sol:22"
+          },
+          {
+            "contract": "DoggyProjectsV1",
+            "label": "payments",
+            "type": "t_mapping(t_address,t_mapping(t_string_memory_ptr,t_uint256))",
+            "src": "../project:/contracts/DoggyProjectsV1.sol:24"
+          },
+          {
+            "contract": "DoggyProjectsV1",
+            "label": "lostPayments",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/DoggyProjectsV1.sol:33"
+          },
+          {
+            "contract": "DoggyProjectsV1",
+            "label": "totalFund",
+            "type": "t_uint256",
+            "src": "../project:/contracts/DoggyProjectsV1.sol:34"
+          },
+          {
+            "contract": "DoggyProjectsV1",
+            "label": "initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/DoggyProjectsV1.sol:34"
+          }
+        ],
+        "types": {
+          "t_address_payable": {
+            "label": "address payable"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_mapping(t_string_memory_ptr,t_struct(ProjectStatus)22_storage))": {
+            "label": "mapping(address => mapping(string => struct DoggyProjectsV1.ProjectStatus))"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_mapping(t_string_memory_ptr,t_struct(ProjectStatus)22_storage)": {
+            "label": "mapping(string => struct DoggyProjectsV1.ProjectStatus)"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_struct(ProjectStatus)22_storage": {
+            "label": "struct DoggyProjectsV1.ProjectStatus",
+            "members": [
+              {
+                "label": "requestTime",
+                "type": "t_uint256"
+              },
+              {
+                "label": "projectDurationInDays",
+                "type": "t_uint256"
+              },
+              {
+                "label": "totalFee",
+                "type": "t_uint256"
+              },
+              {
+                "label": "started",
+                "type": "t_bool"
+              },
+              {
+                "label": "firstPaymentMade",
+                "type": "t_bool"
+              },
+              {
+                "label": "totalPaymentMade",
+                "type": "t_bool"
+              },
+              {
+                "label": "clientDone",
+                "type": "t_bool"
+              },
+              {
+                "label": "projectDone",
+                "type": "t_bool"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_mapping(t_string_memory_ptr,t_uint256))": {
+            "label": "mapping(address => mapping(string => uint256))"
+          },
+          "t_mapping(t_string_memory_ptr,t_uint256)": {
+            "label": "mapping(string => uint256)"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          }
+        }
+      }
+    }
+  }
+}
