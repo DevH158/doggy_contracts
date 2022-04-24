@@ -246,17 +246,14 @@ contract DoggyProjectsV1 {
             "cannot clean project yet, need to wait 4 days"
         );
 
-        // client에게로 50%의 금액 보내기
+        // client에게로 금액 보내기
         uint256 payment = payments[_client][_projectName];
 
         payments[_client][_projectName] = 0;
         delete clientToProject[_client][_projectName];
         ongoingProjects--;
 
-        (bool success1, ) = payable(_client).call{value: payment / 2}("");
+        (bool success1, ) = payable(_client).call{value: payment}("");
         require(success1, "payment transfer to client failed");
-
-        (bool success2, ) = owner.call{value: payment / 2}("");
-        require(success2, "payment transfer to owner failed");
     }
 }
